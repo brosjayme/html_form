@@ -25,7 +25,7 @@
 <h1 class="text-center">Data entry page</h1>
 
 <div class="container mt-5 w-50 p-2">
-<form action="login.php" method= "post">
+<form action="config.php" method= "post">
 <div class="mb-3">
   <label for="name" class="form-label">Name</label>
   <input type="text" class="form-control"
@@ -40,16 +40,15 @@
   <fieldset>
 
     <div>
-        <legend>Gender :
-        <input type="radio" name="male" value=""/>
+        <label>Gender </label>
+        <input type="radio" name="gender" value="m"/>
         <label for="genderChoice1">Male</label>
 
-        <input type="radio" name="female" value=""/>
+        <input type="radio" name="gender" value="f"/>
         <label for="genderChoice2">Female</label>
 
-        <input type="radio" name="others" value=""/>
+        <input type="radio" name="gender" value="m"/>
         <label for="genderChoice3">Others</label>
-        </legend>
     </div>
   </fieldset>
 </div>

@@ -9,10 +9,17 @@ $password=$_POST['password'];
 
 
 
-$conn =new mysqli_connect('localhost', 'root', '', 'info_form');
+$conn =new mysqli('localhost', 'root', '', 'info_form');
 
 if($conn){
-    echo 'connection secure!!';
+$sql= "insert into `form`(username, email, gender, phone, password)
+values('$username','$email', '$gender', '$phone', '$password')";
+$result=mysqli_query($conn, $sql);
+if($result){
+    echo 'data insertion successful';
+}
+}else{
+    die(mysqli_error($conn));
 }
 }
 
