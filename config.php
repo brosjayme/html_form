@@ -1,19 +1,19 @@
 <?php
 
-$HOSTNAME = 'localhost';
-$USERNAME = 'root';
-$PASSWORD ='';
-$GENDER ='';
-$EMAIL = '';
-$PHONE = '';
-$DATABASE ='info_form';
+if($_SERVER['REQUEST_METHOD']=='POST'){
+$username=$_POST['username'];
+$email=$_POST['email'];
+$gender=$_POST['gender'];
+$phone=$_POST['phone'];
+$password=$_POST['password'];
 
 
-$conn = mysqli_connect($HOSTNAME, $USERNAME, $PASSWORD, $GENDER, $EMAIL, $PHONE, $DATABASE);
+
+$conn =new mysqli_connect('localhost', 'root', '', 'info_form');
 
 if($conn){
     echo 'connection secure!!';
 }
-
+}
 
 ?>
